@@ -27,12 +27,6 @@ class ProgressModel {
       correctCount: map['correctCount'],
     );
   }
-  double get accuracy {
-    if (cardsReviewed == 0)
-      return 0;
-    else
-      return (correctCount / cardsReviewed) * 100;
-  }
 
   ProgressModel copyWith({int? cardsReviewed, int? correctCount}) {
     return ProgressModel(
